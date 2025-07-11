@@ -42,28 +42,28 @@ body {
     filter: blur(2px);
 }
 
+.box img{
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 
 .box1 {
     grid-area: one;
-    object-fit: cover;
 }
 
 .box2 {
     grid-area: two;
-    object-fit: cover;
 }
 
 .box3 {
     grid-area: three;
-    object-fit: cover;
 }
 
 .box4 {
     grid-area: four;
-    object-fit: cover;
 }
 
 .box5 {
     grid-area: five;
-    object-fit: cover;
 }
