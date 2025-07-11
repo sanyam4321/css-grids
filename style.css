@@ -9,10 +9,27 @@ body {
     height: 90%;
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 'one' 'two' 'three' 'four' 'five';
     padding: 15px;
 }
 
+@media screen and (min-width: 768px) {
+    .container{
+      grid-template-areas: 
+      'one one two'
+      'three three two'
+      'four five five'
+      ;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .container{
+        grid-template-areas: 
+       'one one two three'
+       'four five five three'
+       ;
+    }
+}
 .container div {
     box-shadow: 0 0 5px #111;
     border-radius: 5px;
@@ -26,52 +43,27 @@ body {
 }
 
 
-
-.box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .box1 {
-    background-image: url('static/img1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-area: one;
+    object-fit: cover;
 }
 
 .box2 {
-    background-image: url('static/img2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    grid-area: two;
+    object-fit: cover;
 }
 
 .box3 {
-    background-image: url('static/img3.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: span 2;
+    grid-area: three;
+    object-fit: cover;
 }
 
 .box4 {
-    background-image: url('static/img4.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    grid-area: four;
+    object-fit: cover;
 }
 
 .box5 {
-    background-image: url('static/img5.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    grid-column-start: 2;
-    grid-column-end: 4;
+    grid-area: five;
+    object-fit: cover;
 }
