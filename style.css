@@ -20,8 +20,8 @@ html, body {
         'three'
         'four'
         'five';
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 1fr); /* Equal height rows */
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
 }
 
 @media screen and (min-width: 768px) {
@@ -30,8 +30,6 @@ html, body {
             'one one two'
             'three three two'
             'four five five';
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
     }
     .container div{
         overflow: hidden;
@@ -43,8 +41,6 @@ html, body {
         grid-template-areas: 
             'one one two three'
             'four five five three';
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
     }
 }
 
