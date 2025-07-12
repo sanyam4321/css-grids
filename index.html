@@ -15,7 +15,9 @@
             <img src="static/icons8-logo-50.png" alt="">
         </div>
         <div class="hamburger">
-            <img src="static/menu.png" alt="">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
         <div class="links">
             <ul>
@@ -38,6 +40,7 @@
         let menu = document.querySelector('.menu-links')
         let menuBtn = document.querySelector('.hamburger')
         menuBtn.addEventListener('click', (e)=>{
+            menuBtn.classList.toggle('active')
             menu.classList.toggle('active')
         })
     </script>
